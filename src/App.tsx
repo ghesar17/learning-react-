@@ -1,16 +1,15 @@
-import Button from "./components/Button";
-import Alert from "./components/Alert";
+import NewListGroup from "./components/Grid";
+import Kana from "./components/Kana";
+
 import { useState } from "react";
 
 function App() {
-  const [alertVisible, setAlertVisibility] = useState(false);
+  let heading = "Characters";
 
   return (
     <>
-      {alertVisible && (
-        <Alert onClose={() => setAlertVisibility(false)}>My alert!</Alert>
-      )}
-      <Button onClick={() => setAlertVisibility(true)}> "Press me!" </Button>
+      <NewListGroup heading={heading} characters={characters} />
+      <Kana />
     </>
   );
 }
